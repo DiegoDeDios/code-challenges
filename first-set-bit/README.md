@@ -25,7 +25,8 @@ Output:
 Explanation:
 Testcase 1: Binary representation of the 18 is 010010, the first set bit from the right side is at position 2.
 
-#My Solution 
-##EN
+# My Solution 
+
+## EN
   
-##ES
+## ES
