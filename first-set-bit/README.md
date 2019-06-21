@@ -25,8 +25,13 @@ Output:
 Explanation:
 Testcase 1: Binary representation of the 18 is 010010, the first set bit from the right side is at position 2.
 
-# My Solution 
+# My Solution / Mi Solución
 
 ## EN
-  
+  The problem is trying to say that by receiving a number _t_ we want to find the position of the first set bit on its binary representation. Mi solution implies using the **& (AND)** operator as a mask between the number _t_ and a mask _n_
+For example:
+  Let t = 18, its binary representation as a 5 bit value is  **0b10010** The mask n begins as a value of n = 1, in other words: its binary representation **0b00001**. Notice how if we make the logical operation  **t&n** the result is 0 (_10010 & 00001 = 00000_) However, if we make a bit shift to the left on the mask n once we find the first set bit the operation **t&n**  becomes a value different than 0. Then we can say that the first set bit is equivalent to the number of bit shifts to the left before **t&n**  becomes a value different than 0.
 ## ES
+  Lo que el problema quiere decir es que al recibir un número _t_ queremos encontrar la posición del primer bit encendido en su representación binaria. Mi solución implica un enmascaramiento de bits usando el operador **& (AND)** entre el número _t_ y una mascara _n_ 
+Por ejemplo: 
+    Sea t = 18, su representación en binario como un valor de 5 bits es **0b10010** La máscara n empieza con un valor de n = 1, es decir, en binario **0b00001** Notemos como si aplicamos la operación **t&n** el resultado es 0 (_10010 & 00001 = 00000_) . Sin embargo si empezamos a hacer un desplazamiento de un bit a la izquierda en la mascara, al momento de encontrar el primer bit encendido **t&n** se vuelve un valor diferente de 0. Entonces podemos encontrar la posición del primer bit encendido con el número de desplazamientos a la izquierda que hicimos sobre la máscara n.   
